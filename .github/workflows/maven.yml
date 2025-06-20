@@ -41,4 +41,4 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Trigger Render Deployment
-      run: curl -X POST ${{ secret.RENDER_DEPLOY_HOOK }}
+      run: curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}
