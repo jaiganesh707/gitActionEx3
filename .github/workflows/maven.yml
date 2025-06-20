@@ -39,3 +39,6 @@ jobs:
         dockerfile: DockerFile
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
+
+    - name: Trigger Render Deployment
+      run: curl -X POST ${{ secret.RENDER_DEPLOY_HOOK }}
